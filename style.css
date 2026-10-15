@@ -1,0 +1,50 @@
+:root{--bg:#0b1020;--card:#151c33;--card2:#1c2545;--txt:#e8ecff;--mut:#97a0c8;--acc:#22d3a6;--acc2:#6c8cff;--bad:#ff5d73;--ok:#22d3a6;--bd:#2a3563}
+body.light{--bg:#f2f5ff;--card:#fff;--card2:#eef1ff;--txt:#141a33;--mut:#5b6590;--bd:#d6dcf5}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Segoe UI',system-ui,sans-serif;background:radial-gradient(circle at 15% -10%,#25316b55,transparent 45%),var(--bg);color:var(--txt);min-height:100vh;display:flex;flex-direction:column}
+main{flex:1;width:100%;max-width:1000px;margin:0 auto;padding:24px 16px}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:18px}
+a{color:var(--acc2)}
+#nav{display:flex;align-items:center;gap:6px;padding:12px 20px;border-bottom:1px solid var(--bd);backdrop-filter:blur(8px);position:sticky;top:0;z-index:5;background:#0b102099;flex-wrap:wrap}
+body.light #nav{background:#f2f5ffcc}
+#nav:empty{display:none}
+.brand{font-weight:800;font-size:20px;margin-right:auto;text-decoration:none;color:var(--txt)}
+.brand span{color:var(--acc)}
+#nav a.lnk,#nav button{color:var(--txt);text-decoration:none;padding:7px 12px;border-radius:8px;background:none;border:0;cursor:pointer;font-size:14px}
+#nav a.lnk:hover,#nav button:hover,#nav a.on{background:var(--card2)}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:20px;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+.tcard{cursor:pointer;transition:.2s;text-decoration:none;color:inherit;display:block;position:relative;overflow:hidden}
+.tcard:hover{transform:translateY(-4px);border-color:var(--acc)}
+.tcard .ic{font-size:34px}
+.tag{font-size:12px;padding:3px 9px;border-radius:99px;background:var(--card2);color:var(--mut);display:inline-block;margin:2px 4px 0 0}
+.tag.g{background:#22d3a626;color:var(--ok)}
+h1,h2,h3{margin:.3em 0}
+p{line-height:1.65;color:var(--mut)}
+.btn{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#041014;border:0;padding:11px 20px;border-radius:10px;font-weight:700;cursor:pointer;font-size:15px;text-decoration:none;display:inline-block}
+.btn.ghost{background:none;border:1px solid var(--bd);color:var(--txt)}
+.btn:hover{filter:brightness(1.1)}
+input,select,textarea{width:100%;font-family:inherit;padding:12px;border-radius:10px;border:1px solid var(--bd);background:var(--card2);color:var(--txt);margin:6px 0 12px;font-size:15px}
+label{font-size:13px;color:var(--mut)}
+.auth{max-width:420px;margin:6vh auto}
+.err{color:var(--bad);font-size:14px;min-height:20px}
+.meter{height:6px;border-radius:9px;background:var(--card2);overflow:hidden;margin:-6px 0 4px}
+.meter i{display:block;height:100%;width:0;transition:.3s}
+.hero{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.ring{--p:0;width:110px;height:110px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--acc) calc(var(--p)*1%),var(--card2) 0);flex:none}
+.ring b{background:var(--card);width:86px;height:86px;border-radius:50%;display:grid;place-items:center;font-size:22px}
+.pt{display:flex;gap:14px}
+.pt .n{flex:none;width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#041014;display:grid;place-items:center;font-weight:800}
+.pt p{margin:.2em 0}
+.tip{border-left:4px solid var(--acc);background:var(--card2);padding:12px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+.bar{height:8px;background:var(--card2);border-radius:9px;overflow:hidden;margin-bottom:16px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--acc),var(--acc2));transition:.3s}
+.opt{display:block;width:100%;text-align:left;padding:13px 15px;margin:8px 0;border-radius:10px;border:1px solid var(--bd);background:var(--card2);color:var(--txt);cursor:pointer;font-size:15px}
+.opt:hover{border-color:var(--acc2)}
+.opt.sel{border-color:var(--acc);background:#22d3a61f}
+.opt.right{border-color:var(--ok);background:#22d3a62e}
+.opt.wrong{border-color:var(--bad);background:#ff5d7326}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.crumb{color:var(--mut);font-size:14px;margin-bottom:8px}
+.crumb a{text-decoration:none}
+@media(max-width:600px){#nav{padding:10px}.brand{width:100%}}
